@@ -32,5 +32,5 @@ This is the first test run of the Software Factory pipeline. The goal is a minim
 - [x] Confirm no ESLint errors (`npm run lint`)
 
 ### 6. Wrap up
-- [ ] Confirm all changed files are staged
+- [x] Confirm all changed files are staged
 - [ ] Open a pull request from `factory/issue-1` → `main` referencing Issue #1
