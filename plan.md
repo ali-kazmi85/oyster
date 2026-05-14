@@ -27,8 +27,8 @@ This is the first test run of the Software Factory pipeline. The goal is a minim
 
 ### 5. Verify correctness
 - [x] Confirm TypeScript compiles cleanly (`npx tsc --noEmit`)
-- [ ] Confirm the dev server starts without errors (`npm run dev`)
-- [ ] Manually verify `/hello` renders in the browser and `/api/hello` returns JSON
+- [x] Confirm the dev server starts without errors (`npm run dev`)
+- [x] Manually verify `/hello` renders in the browser and `/api/hello` returns JSON
 - [x] Confirm no ESLint errors (`npm run lint`)
 
 ### 6. Wrap up
