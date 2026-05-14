@@ -2,10 +2,12 @@
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
+import { Info } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 import type { Project } from '@/types'
 
 interface ProjectFormProps {
@@ -125,7 +127,26 @@ export function ProjectForm({ project }: ProjectFormProps) {
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="pat_token">GitHub PAT Token</Label>
+            <div className="flex items-center gap-1.5">
+              <Label htmlFor="pat_token">GitHub PAT Token</Label>
+              <TooltipProvider delayDuration={200}>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Info className="h-3.5 w-3.5 text-muted-foreground cursor-help" />
+                  </TooltipTrigger>
+                  <TooltipContent side="right" className="max-w-72 space-y-2 text-xs leading-relaxed">
+                    <p className="font-semibold">Creating a fine-grained PAT:</p>
+                    <ol className="list-decimal pl-4 space-y-1">
+                      <li>Go to GitHub → Settings → Developer settings → Personal access tokens → Fine-grained tokens</li>
+                      <li>Click <span className="font-medium">Generate new token</span></li>
+                      <li>Set <span className="font-medium">Repository access</span> to this repo</li>
+                      <li>Under <span className="font-medium">Permissions</span>, enable read &amp; write for: Contents, Issues, Pull requests</li>
+                      <li>Click <span className="font-medium">Generate token</span> and copy it here</li>
+                    </ol>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+            </div>
             <Input
               id="pat_token"
               name="pat_token"
