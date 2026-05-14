@@ -11,6 +11,7 @@ import {
   GitBranch,
   Settings,
   LayoutGrid,
+  Globe,
 } from 'lucide-react'
 
 export function Sidebar() {
@@ -108,6 +109,18 @@ export function Sidebar() {
         >
           <LayoutGrid className="h-4 w-4 shrink-0" />
           All Projects
+        </Link>
+        <Link
+          href="/hello"
+          className={cn(
+            'flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium transition-colors',
+            pathname === '/hello'
+              ? 'bg-accent text-accent-foreground'
+              : 'text-muted-foreground hover:bg-accent hover:text-accent-foreground'
+          )}
+        >
+          <Globe className="h-4 w-4 shrink-0" />
+          Hello
         </Link>
       </div>
     </aside>
