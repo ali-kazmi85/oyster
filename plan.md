@@ -33,4 +33,4 @@ This is the first test run of the Software Factory pipeline. The goal is a minim
 
 ### 6. Wrap up
 - [x] Confirm all changed files are staged
-- [ ] Open a pull request from `factory/issue-1` → `main` referencing Issue #1
+- [x] Open a pull request from `factory/issue-1` → `main` referencing Issue #1
